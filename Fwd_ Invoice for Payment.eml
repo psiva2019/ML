@@ -1,0 +1,229 @@
+Received: from PH0P220MB0731.NAMP220.PROD.OUTLOOK.COM (2603:10b6:510:112::11)
+ by DM8P220MB0705.NAMP220.PROD.OUTLOOK.COM with HTTPS; Sun, 28 Jul 2024
+ 11:43:54 +0000
+Received: from CH5P220CA0005.NAMP220.PROD.OUTLOOK.COM (2603:10b6:610:1ef::26)
+ by PH0P220MB0731.NAMP220.PROD.OUTLOOK.COM (2603:10b6:510:112::11) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7807.27; Sun, 28 Jul
+ 2024 11:43:52 +0000
+Received: from DS3PEPF0000C380.namprd04.prod.outlook.com
+ (2603:10b6:610:1ef:cafe::84) by CH5P220CA0005.outlook.office365.com
+ (2603:10b6:610:1ef::26) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7784.34 via Frontend
+ Transport; Sun, 28 Jul 2024 11:43:52 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.166.182)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.166.182 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.166.182; helo=mail-il1-f182.google.com; pr=C
+Received: from mail-il1-f182.google.com (209.85.166.182) by
+ DS3PEPF0000C380.mail.protection.outlook.com (10.167.23.10) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.7784.11
+ via Frontend Transport; Sun, 28 Jul 2024 11:43:52 +0000
+X-IncomingTopHeaderMarker:
+ OriginalChecksum:4913B13BD08B96703E685EC1021B043FFB88A1F068CA9661AD25A1ADB30546FB;UpperCasedChecksum:1E4B2ACE127C7BF9C80E3EE3668E760A2AFFD9FBD9BBF905C0F2EBCEC4BBF537;SizeAsReceived:2913;Count:17
+Received: by mail-il1-f182.google.com with SMTP id e9e14a558f8ab-3737dc4a669so13508505ab.0
+        for <ssivaramkrishnan@live.com>; Sun, 28 Jul 2024 04:43:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1722167031; x=1722771831; darn=live.com;
+        h=date:to:references:message-id:subject:mime-version:from:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=HVdVVltd3V5AJ0m3Ff1vyZaP1g+nboUiRr2h3foq9q0=;
+        b=C21LbFhHrgx5haRtytUk8KYmdkCyJ3vnZaVUVzUN8HB0aPXSl6kKRpTicH4JRs2ES5
+         2p4xRuctwEiIKnoEfCkwLqdue5wHNVJmvYeBTP3Ot4ZMEwm63HQm20KRzhxzFu/dBVaD
+         9JMO8v0wG0iO6y9YCspxs52G2tKyPO2UcZkf6U0FZs2HSkPgebiSAFI7Z1zl7Ocqkw6p
+         3Ftkr+3tLeXpXwtxUuabsHzxPorRseCaeoHFMK8x0iYMA8zYj6c9WNafJa1aXBtnHv8j
+         nxcBvTNk2Y0CjAovFq+SV+VOWRYL3VMwM/5xNjL5xwxA+IvxXpbCk6+X+4pOLYX/ntVu
+         wOLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1722167031; x=1722771831;
+        h=date:to:references:message-id:subject:mime-version:from
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=HVdVVltd3V5AJ0m3Ff1vyZaP1g+nboUiRr2h3foq9q0=;
+        b=pptatVC5k37b9pla6Nmuo8zsj1UMO2UbM3jAoze9sEuuKD+3D0b7oFVkuH8klQIpR5
+         D5PHp40fC7u7v+e+BcghPKSzANx3rsk8WoRTdtkkx+hu1Qkkoq3dv4hLzuWm2120Dvly
+         NirZ4gJTS0KczMRIucLNn24JVeMVffMA1syBAEB3TDmHKNu6pbpnLXVZn7ZIZkHQ6Mi7
+         dLH39dD+09+y++mj1WgN9HthdfY/YcU4V78azYrepr72L06x3JLOQxKukCQkg5gNyOXH
+         hkaPIRL7g+6IO6lrjAzSpUGqjOowtnVCrDQuxCTzGyAIYph766EBP6kjsbgWQI2DwmZ/
+         Vvhg==
+X-Gm-Message-State: AOJu0YxrVhzTZBI4JZBeXsa1IsQeMyAKbRgwivvW5oScOnHKEkv5mJCy
+	fx1azCnE1pfvBxgyaVAj/0qsAPfz4wWgPXC3L/i1W0pm6J1yoSxrbomMxqb9
+X-Google-Smtp-Source: AGHT+IFT7JFHbZmFJesD9m4+QOh0ZHjd69QAJg6ENL0t1eVk7w9B6SUHHfcK8R8dkhq8QfCd9p7Rwg==
+X-Received: by 2002:a05:6e02:2163:b0:37a:601c:9147 with SMTP id e9e14a558f8ab-39aec2d8533mr51514275ab.10.1722167030562;
+        Sun, 28 Jul 2024 04:43:50 -0700 (PDT)
+Return-Path: sivajaya2009@gmail.com
+Received: from smtpclient.apple ([2405:201:e008:816f:9575:dccc:baab:a085])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-1fed7c7ffecsm64096155ad.40.2024.07.28.04.43.49
+        for <ssivaramkrishnan@live.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 28 Jul 2024 04:43:50 -0700 (PDT)
+From: SIVARAMAKRISHNAN SIVALINGAM <sivajaya2009@gmail.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_DDDA87B2-A1EE-4F80-A1E0-A17CB9A891CB"
+Subject: Fwd: Invoice for Payment
+Message-Id: <51F45BAF-C5E2-4AA0-AE52-68094F227041@gmail.com>
+References: <DCE8D7D4-CA9B-4603-BF4C-A85D559397A4@gmail.com>
+To: ssivaramkrishnan@live.com
+Date: Sun, 28 Jul 2024 17:13:37 +0530
+X-Mailer: Apple Mail (2.3814.100.5)
+X-IncomingHeaderCount: 17
+X-MS-Exchange-Organization-ExpirationStartTime: 28 Jul 2024 11:43:52.2456
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 631a22b7-e29c-46e4-c638-08dcaefa8db7
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ DS3PEPF0000C380:EE_|PH0P220MB0731:EE_|DM8P220MB0705:EE_
+X-MS-Exchange-Organization-AuthSource:
+ DS3PEPF0000C380.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 7/28/2024 11:43:14 AM
+X-MS-Office365-Filtering-Correlation-Id: 631a22b7-e29c-46e4-c638-08dcaefa8db7
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.166.182
+X-SID-PRA: SIVAJAYA2009@GMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-PCL: 2
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam:
+ BCL:0;ARA:1444111002|461199028|9800799012|2100799027|47200799018|58200799015|21400799023|9020799016|3412199025|440099028|1370799030|1380799030|1360799030;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 28 Jul 2024 11:43:52.2299
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 631a22b7-e29c-46e4-c638-08dcaefa8db7
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ DS3PEPF0000C380.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH0P220MB0731
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.1276316
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.7807.009
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:I;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90013020)(91025020)(91040095)(9050020)(9060121)(9100341)(944500132)(4810010)(4910033)(9930004)(9545005)(10172021)(9320005)(120001);
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0xO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?RFB2MEZQdkpjdnJmcmVNMDRxeFVUMVFyVkM2N3hnWHFGMlNnakFSTWo5NkVw?=
+ =?utf-8?B?ZFpkbS9sMUVKNjEvMnBQY2J0TDBiSXBtNXNFcnpqTU1KenQ0cERnNUoraFh4?=
+ =?utf-8?B?R0dvdzlSNFdraUMzQzgreXpycVFkNkFtS3hjOE96a2J2eTBGVUdPMDhzem44?=
+ =?utf-8?B?c2VoRksrMFptdkMzdnZvcTFlVTFMQXgzQzlzMnVyWFIyb3UwYVhlUTJSUTZM?=
+ =?utf-8?B?bm9mZXRDRnFxbHBGNitNL3YxQ0s1NDg2enJrbVNLdHF5TlRXajM5WGxHK2lG?=
+ =?utf-8?B?Z0wxa1dsNjRiUk9zaE9ZMkt4K0EyQjFaUGpJYzdKVFkvRk1jRlF4UmxmRjZW?=
+ =?utf-8?B?NTZnbktpMjU5ampqb2VPVXNPNEVkUmgrcWRwWnVlT3hFaTE0RGdCb2JvTDFL?=
+ =?utf-8?B?ckoweVEyY3RGWXRaNmxLdUhabUtpWWx4SkExcTFRd24yUjdmK3ByUDVTYnFz?=
+ =?utf-8?B?NUVZRGVUazRxcUFxUDNNVUcrcXh0ekVXRGR6Uy9nSERzRDBNWDlUZDhVMlZ2?=
+ =?utf-8?B?UFBWdUV2ckYvRTlaOEdaRWVHNTFWK0xQQ3ROZmpabFprOS9wK0dVbVNEV3Rn?=
+ =?utf-8?B?WldQR1Q1MzlaNkNqRVhySERuaGdzODBrMFNjTjUvTUMzekNvUGEzUSttWFlm?=
+ =?utf-8?B?MEFJRllPOXBNWkVKbWZBMnF1MHlHeUNPMEhNUThUa1NYcUJrWVUxM09hNVdl?=
+ =?utf-8?B?MFRUbXZoMHZJYUpRRVIyeENZclhPZ0RQRHZpRmdTdFVkZ0FmY2x2ZTRnU2lw?=
+ =?utf-8?B?akR4NXFERkpQcWZUMmsrbHY4c0FwTDRDOWQvR0xtejNXakR5RDNKWkdzbG5h?=
+ =?utf-8?B?SHcxN1NLZS9OR2lsdGczcUdiZUFVL0RrRXI3cTQrSzFFTmRtQ2dWd1JiMEY1?=
+ =?utf-8?B?TXdob0VMblNoRFJIQTlkR0poU3ZIeXUrVlRWLytDSnJ3b2Uwd3VWVGVjQXF2?=
+ =?utf-8?B?OXpVcURkeG1WcHRtekpDQ2l5TGpuWnVvQ0dmYlc5OWtqT0Rqc0VtVG5IZG9s?=
+ =?utf-8?B?UVlSNzUydHcwa3FGNHVrU3RUT0lpNi9tZlFEdi9QNXZSclZ2YmxFZ2pGTGNy?=
+ =?utf-8?B?bkozSllaM1crM0lEazJaYjdoU25qZ0Q0WlN6a0VkVXVFS3NkT0xjOWZvR1pr?=
+ =?utf-8?B?SXNnNjJ4bHVCek9JdktyMjhiUm5STm1ROVRQM3UwaFpMZFBqWU9ESEprUEFl?=
+ =?utf-8?B?azg1VjlIS0pCUGgxOUErNTl2L0JRbzJmSEZrSVhDMU1jZzdEZXZCeHVUaDNO?=
+ =?utf-8?B?ZytJMXgvWGJPbDExQkRTVEtyQXpMYTNYVlhsNnZTMzhZQWJ6WE4rWUQzekFR?=
+ =?utf-8?B?ODBBZ0NSWVZnalpGWmlhdGF4TzFGSjFQRlVsRmVMdmo4OU94dXk0UGM5UFBH?=
+ =?utf-8?B?Y3JBRlpQQ3d1NEZkb3BibExuc0xBM2pCd1BoMnNvdnc0S0piYVFPNEkwSGpq?=
+ =?utf-8?B?UnBYM0FiemRMa2xxUHp2ZndJMVlWTFdaSTY1K1pTTi9aODlsS0ZqMFV3Mitn?=
+ =?utf-8?B?TFA0cFdBdnNPRkRKYWx0R0IxcmR3RWRUaU8zNW9Zc29Gbmg5Zk5SZE41UUJY?=
+ =?utf-8?B?ZHdLMVFUZVRyYiticWk3TFo5MjdNZ01nU0plSUtveVB2dzAzLzFKcjhmZTN4?=
+ =?utf-8?B?VXpKSVRLR01vWjdwMVQxWjlLaXcwY1FiN29QdXFqRWFDNldEY00vbG5IU0JC?=
+ =?utf-8?B?OTJHemNrSEpkQWJVR1J0SDVCejRiV0dVYXhGb3dpWEJwM2FPdGRMMDI3ands?=
+ =?utf-8?B?WHRXU0k1a3ZPNThtdnJjdkNWdlEvaHZCcnNEUXQzckF2cm9BMjdrY04wanVY?=
+ =?utf-8?B?RndWQ3ZiK2Y5d1MybWp5NzgyeEFxVFdOYURTTnNUelY3cXBVbllsKy9UMWMz?=
+ =?utf-8?B?RG4xMzVjZFltWjNpYmVuekh4RW4vMkdXR2ZudXNVVk5adGVEak9BeUZBQmNQ?=
+ =?utf-8?B?eDlaN1lNekFZaTMvUDV5dENrd0NIZ0dPMnUrT1FaSndOaFdsVXpKREpMWVEv?=
+ =?utf-8?B?MWRzbVh4aWlGeFI4ZE1maDFobmhzbzV5SU9BUlNtOTFQS1RCa2tpL3dDdjVk?=
+ =?utf-8?B?SmdzVnZvelJFVEd4bzNDdW43N0Nqa1AxNzJPaWJyZ01OZk56cDR6S0JLZGNK?=
+ =?utf-8?B?UjdYVWhnOTJ4NUJLOHcyNlhTdjdYbzFwKy94SGhPeTViUGhYaFplL3J2UzBT?=
+ =?utf-8?B?TmhOYlRUWXZHZnRnUXdPSC9NaWFiUFUwT2FPZ243RkxiZmZyYjRjR01oUkY1?=
+ =?utf-8?B?U1Y5azlQRjQyckY0aVpQY2J6VnFYWTJ1cklraVVFUWN6SUdGdFYzQ0lwT0RK?=
+ =?utf-8?B?bG91NFJhTWFZYmw1aTJDb0tHMEI1S0crYWphaVY0WmFBUlIyNFJ5TUhDeU9C?=
+ =?utf-8?B?SmV3UnVxM0x1T2paRGRJeDVzU1BEVjRZclB5RDE2N2VoRXRQQmQwYlg5ZWJn?=
+ =?utf-8?B?YWpqNlRvUDV2bFVEV0pMbTFRZXg3TnBXY3ZVSUJWK0dMbExHOTFJd25SRFU4?=
+ =?utf-8?B?bWxmMmdQektSYk5QeDRIc2VVQW5xZXZnemFNdnozY1ZDQ1krT2sxQWJaV2VY?=
+ =?utf-8?B?c05pR0cvZ1ppRnZSNVYwV0ttUzV1YSs0OExWZWdOOWZRVzNYMGNob1lLREVF?=
+ =?utf-8?B?ZThJYmttZDNGMkQ4VW55QVNFQld3QUhqOS9uYjQrU0p3dGRhS1YyZzVISm5n?=
+ =?utf-8?B?N0diQk9KU1FraWNrRk5vQ0prNGZybjBsVHc9PQ==?=
+MIME-Version: 1.0
+
+--Apple-Mail=_DDDA87B2-A1EE-4F80-A1E0-A17CB9A891CB
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+
+
+> Begin forwarded message:
+>=20
+> From: SIVARAMAKRISHNAN SIVALINGAM <sivajaya2009@gmail.com>
+> Subject: Invoice for Payment
+> Date: 28 July 2024 at 5:07:22=E2=80=AFPM IST
+> To: Sivaramakrishnan Sivalingam <sivajaya2009@gmail.com>
+>=20
+> Invoice No.: INV-42532622                   Invoice Date: 2021-05-23
+>=20
+> No Description Quantity Unit Price, $ Price, $
+> 1 | Lorems ipsum 5 2.30 11.50
+> 2 | Consectetur adipiscing el 2 5.63 11.26
+> 3 | Quis autem vel eum i 3 3.63 10.89
+>=20
+> Subtotal 33.65     Tax Amount 1.68    Grand total 35.33
+>=20
+> Note: The tax invoice is computer generated and no signature is =
+required.
+
+
+--Apple-Mail=_DDDA87B2-A1EE-4F80-A1E0-A17CB9A891CB
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"></=
+head><body style=3D"overflow-wrap: break-word; -webkit-nbsp-mode: space; li=
+ne-break: after-white-space;"><br id=3D"lineBreakAtBeginningOfMessage"><div=
+><br><blockquote type=3D"cite"><div>Begin forwarded message:</div><br class=
+=3D"Apple-interchange-newline"><div style=3D"margin-top: 0px; margin-right:=
+ 0px; margin-bottom: 0px; margin-left: 0px;"><span style=3D"font-family: -w=
+ebkit-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, =
+0, 1.0);"><b>From: </b></span><span style=3D"font-family: -webkit-system-fo=
+nt, Helvetica Neue, Helvetica, sans-serif;">SIVARAMAKRISHNAN SIVALINGAM &lt=
+;sivajaya2009@gmail.com&gt;<br></span></div><div style=3D"margin-top: 0px; =
+margin-right: 0px; margin-bottom: 0px; margin-left: 0px;"><span style=3D"fo=
+nt-family: -webkit-system-font, Helvetica Neue, Helvetica, sans-serif; colo=
+r:rgba(0, 0, 0, 1.0);"><b>Subject: </b></span><span style=3D"font-family: -=
+webkit-system-font, Helvetica Neue, Helvetica, sans-serif;"><b>Invoice for =
+Payment</b><br></span></div><div style=3D"margin-top: 0px; margin-right: 0p=
+x; margin-bottom: 0px; margin-left: 0px;"><span style=3D"font-family: -webk=
+it-system-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, =
+1.0);"><b>Date: </b></span><span style=3D"font-family: -webkit-system-font,=
+ Helvetica Neue, Helvetica, sans-serif;">28 July 2024 at 5:07:22=E2=80=AFPM=
+ IST<br></span></div><div style=3D"margin-top: 0px; margin-right: 0px; marg=
+in-bottom: 0px; margin-left: 0px;"><span style=3D"font-family: -webkit-syst=
+em-font, Helvetica Neue, Helvetica, sans-serif; color:rgba(0, 0, 0, 1.0);">=
+<b>To: </b></span><span style=3D"font-family: -webkit-system-font, Helvetic=
+a Neue, Helvetica, sans-serif;">Sivaramakrishnan Sivalingam &lt;sivajaya200=
+9@gmail.com&gt;<br></span></div><br><div><div>Invoice No.: INV-42532622 &nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoice Date: 2021-05-23<br><br>No Descriptio=
+n Quantity Unit Price, $ Price, $<br>1 | Lorems ipsum 5 2.30 11.50<br>2 | C=
+onsectetur adipiscing el 2 5.63 11.26<br>3 | Quis autem vel eum i 3 3.63 10=
+.89<br><br>Subtotal 33.65 &nbsp;&nbsp;&nbsp;&nbsp;Tax Amount 1.68 &nbsp;&nb=
+sp;&nbsp;Grand total 35.33<br><br>Note: The tax invoice is computer generat=
+ed and no signature is required.<br></div></div></blockquote></div><br></bo=
+dy></html>=
+
+--Apple-Mail=_DDDA87B2-A1EE-4F80-A1E0-A17CB9A891CB--

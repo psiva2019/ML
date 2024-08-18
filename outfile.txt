@@ -1,0 +1,25 @@
+Your Company Inc                        Bill To:
+Company No : U-1423242                  Target Company Inc
+
+Unit 1, Lingkaran Syed Putra            Unit 999, Lingkaran Syed Putra
+
+Mid Valley City                         Mid Valley City
+
+59200 Kuala Lumpur                      59200 Kuala Lumpur
+
+Wilayah Persekutuan Kuala Lumpur        Wilayah Persekutuan Kuala Lumpur
+Tel: 03-9876 5432                       Tel: 03-1234 567
+
+INVOICE
+
+Invoice No.: INV-42532622                   Invoice Date: 2021-05-23
+
+No Description Quantity Unit Price, $ Price, $
+1 | Lorems ipsum 5 2.30 11.50
+2 | Consectetur adipiscing el 2 5.63 11.26
+3 | Quis autem vel eum i 3 3.63 10.89
+
+Subtotal 33.65     Tax Amount 1.68    Grand total 35.33
+
+Note: The tax invoice is computer generated and no signature is required.
+
